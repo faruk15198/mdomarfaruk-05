@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+
+}
+html{
+	font-size: 14px;
+	font-family: 'Montserrat', sens-serif;
+}
+a{
+	text-decoration: none;
+}
+.container{
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/*start the navigation bar*/
+.navber_Menu {
+    width: 1170px;
+    margin: auto;
+    padding: 10px 0px;
+    display: table;
+}
+
+.Logo_inner {
+    width: 120px;
+    float: left;
+    margin-right: 80px;
+}
+
+a#Logo_link {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+.Manu_inner {
+    width: 800px;
+    float: right;
+    margin-top: 20px;
+}
+
+ul#Menu_Ul {
+    float: right;
+    list-style: none;
+}
+
+ul#Menu_Ul li {
+    float: left;
+    margin-right: 20px;
+}
+
+ul#Menu_Ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    border: 2px solid #dc143c;
+    padding: 10px;
+    color: #dc143c;
+    z-index: 1;
+    font-weight: 600;
+    position: relative;
+    transition: .3s ease color;
+}
+ul#Menu_Ul li a:after {
+	content: " ";
+	width: 100%;
+	background: #dc143c;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	transform-origin: left;
+	transform: scaleX(0);
+	transition: .3s ease background-color;
+}
+
+ul#Menu_Ul li a:hover:after {
+    transform: scale(1);
+    z-index: -1;
+}
+
+ul#Menu_Ul li a:hover {
+    color: #fff;
+}
+/*End the navigation bar*/
+
+/*start hero section*/
+#hero{
+	background-image: url(../image/work-4.jpg);
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#hero::after{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity:.7;
+	z-index: -1;
+
+}
+#hero h1{
+	display: block;
+	width: fit-content;
+	font-size:4rem;
+	position: relative;
+	color: white;
+}
+#hero .cta{
+	display: inline-block;
+	padding:10px 30px;
+	color: crimson;
+	background-color: transparent;
+	border:2px solid crimson;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	margin-top: 36px;
+	transition: background-color,color;
+	transition:.3s ease background-color;
+
+}
+#hero .cta:hover{
+	color: white;
+	background: crimson;
+}
+/*end hero section*/
+
